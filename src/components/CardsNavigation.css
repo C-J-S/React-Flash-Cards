@@ -1,0 +1,31 @@
+.cards__navigation {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card-count {
+  position: absolute;
+  left: 0;
+  color: #000;
+  font-size: 1.8rem;
+}
+
+.cards__navigation > a,
+.cards__navigation > a:visited {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 2px solid transparent;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.cards__navigation> a:hover {
+  border-bottom: 2px solid currentColor;
+}

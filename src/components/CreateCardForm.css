@@ -1,0 +1,49 @@
+.form {
+  position: relative;
+  height: var(--card-height);
+  background-color: #fff;
+  box-shadow: var(--shadow-main);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form__heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.form__nav {
+  margin-right: auto;
+}
+
+.form__nav > a,
+.form__nav > a:visited {
+  color: #000;
+  text-decoration: none;
+  margin-left: 2rem;
+  text-transform: uppercase;
+}
+
+.form__nav > a:hover {
+  border-bottom: 2px solid currentColor;
+}
+
+.form__card-count span {
+  background-color: var(--color-grey-dark);
+  color: #fff;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

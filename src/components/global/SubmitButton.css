@@ -1,0 +1,33 @@
+.button {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  background-color: var(--color-grey-dark);
+  border: none;
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-main);
+  transition: var(--transition-timing);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  background-color: var(--color-blue-dark);
+}
+
+.button:active {
+  transform: translateY(3px);
+  box-shadow: var(--shadow-btn-pressed);
+}
+
+.button:disabled,
+.button:disabled:hover,
+.button:disabled:active {
+  cursor: not-allowed;
+  background-color: var(--color-grey-darkest);
+}

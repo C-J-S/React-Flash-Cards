@@ -1,0 +1,118 @@
+.hamburger {
+  --menu-width: 7rem;
+  --menu-height: var(--menu-width);
+  --handle-spacing: 1.25rem;
+  --handle-width: calc(var(--menu-width) * 0.5);
+
+  width: var(--menu-width);
+  height: var(--menu-height);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hamburger__handle,
+.hamburger__handle::before,
+.hamburger__handle::after {
+  width: var(--handle-width);
+  height: .2rem;
+  background-color: var(--color-grey-dark);
+  border-radius: 1rem;
+  position: relative;
+  transition: var(--transition-timing);
+  display: block;
+}
+
+.hamburger__handle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: var(--handle-spacing);
+  width: 100%;
+}
+
+.hamburger__handle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(var(--handle-spacing) * -1);
+  width: 100%;
+}
+
+.hamburger.nav-open > .hamburger__handle::before {
+  transform: translate(var(--handle-width), calc(var(--handle-spacing) * -1)) rotate(45deg);
+}
+
+.hamburger.nav-open > .hamburger__handle {
+  transform: translateX(calc(var(--handle-width) * -1));
+  background-color: transparent;
+}
+
+.hamburger.nav-open  > .hamburger__handle::after {
+  transform: translate(var(--handle-width), var(--handle-spacing)) rotate(-45deg);
+}
+
+.navbar__nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: var(--shadow-main);
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: transform .2s ease;
+  font-size: 2.8rem;
+  z-index: 10000;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar__nav {
+    width: 20rem;
+  }
+}
+
+.hamburger.nav-open + .navbar__nav {
+  transform: translateX(0);
+}
+
+.navbar__list {
+  list-style-type: none;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.navbar__list > li {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.navbar__list > li:hover {
+  background: var(--color-grey-dark);
+  color: var(--color-grey-light);
+}
+
+.navbar__list > li > a {
+  padding: 1rem 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar__list > li > a,
+.navbar__list > li > a:visited {
+  color: currentColor;
+  text-decoration: none;
+}

@@ -1,0 +1,53 @@
+.card {
+  height: var(--card-height);
+  transform-style: preserve-3d;
+  perspective: 3000px;
+}
+
+.card__inner {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 1rem;
+  transition: all 1s ease;
+}
+
+.card__inner > * {
+  border-radius: 1rem;
+}
+
+.card__face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--shadow-main);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__face-heading {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.card__face > p {
+  max-width: 70%;
+  height: auto;
+}
+
+.card__back {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .card__inner {
+  transform: rotateY(-180deg);
+}

@@ -1,0 +1,43 @@
+.deck-list__item {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 5rem;
+  padding: 0 2rem;
+  border-bottom: var(--border-bottom);
+  margin-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.deck-list__item:hover {
+  background-color: var(--color-grey-dark);
+  color: var(--color-grey-light);
+}
+
+.deck-list__heading {
+  margin: 0 1rem;
+}
+
+.deck-list__actions {
+  font-size: 1.75rem;
+  margin-left: auto;
+  align-self: stretch;
+
+  display: flex;
+}
+
+.deck-list__action {
+  padding: 0 1rem;
+  cursor: pointer;
+  align-self: stretch;
+
+  display: flex;
+  align-items: center;
+}
+
+.deck-list__action:hover {
+  color: var(--color-blue-light);
+  background-color: var(--color-grey-darkest);
+}
